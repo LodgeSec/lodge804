@@ -2,7 +2,7 @@
   "name": "lodge804",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/public/index.js",
   "scripts": {
     "start": "node index.js"
   },

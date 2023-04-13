@@ -36,15 +36,21 @@
 
 @media (max-width: 575px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 177px;
+    min-height: 81px;
   }
 
   .u-section-1 .u-line-1 {
-    width: 340px;
+    margin-top: 56px;
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+    height: auto;
   }
 
   .u-section-1 .u-text-1 {
     font-size: 3rem;
+    margin-top: -56px;
+    margin-bottom: 10px;
   }
 }.u-section-2 .u-sheet-1 {
   min-height: 445px;
@@ -387,8 +393,103 @@
 }
 
 @media (max-width: 575px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 1407px;
+  }
+
   .u-section-2 .u-repeater-1 {
+    height: 219px;
     width: 340px;
+    margin-top: 55px;
+    min-height: auto;
+  }
+
+  .u-section-2 .u-image-1 {
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .u-section-2 .u-text-1 {
+    margin-top: 8px;
+  }
+
+  .u-section-2 .u-text-2 {
+    margin-top: -4px;
+  }
+
+  .u-section-2 .u-text-3 {
+    margin-top: 5px;
+  }
+
+  .u-section-2 .u-icon-1 {
+    margin-top: 0;
+  }
+
+  .u-section-2 .u-image-2 {
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .u-section-2 .u-text-4 {
+    margin-top: 8px;
+  }
+
+  .u-section-2 .u-text-5 {
+    margin-top: -4px;
+  }
+
+  .u-section-2 .u-text-6 {
+    margin-top: 5px;
+  }
+
+  .u-section-2 .u-icon-2 {
+    margin-top: 0;
+  }
+
+  .u-section-2 .u-image-3 {
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .u-section-2 .u-text-7 {
+    margin-top: 8px;
+  }
+
+  .u-section-2 .u-text-8 {
+    margin-top: -4px;
+  }
+
+  .u-section-2 .u-text-9 {
+    margin-top: 5px;
+  }
+
+  .u-section-2 .u-icon-3 {
+    margin-top: 0;
+  }
+
+  .u-section-2 .u-image-4 {
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .u-section-2 .u-text-10 {
+    margin-top: 8px;
+  }
+
+  .u-section-2 .u-text-11 {
+    margin-top: -4px;
+  }
+
+  .u-section-2 .u-text-12 {
+    margin-top: 5px;
+  }
+
+  .u-section-2 .u-icon-4 {
+    margin-top: 0;
   }
 } .u-section-3 {
   background-image: none;
@@ -871,12 +972,11 @@
 
 @media (max-width: 575px) {
   .u-section-3 .u-sheet-1 {
-    min-height: 1934px;
+    min-height: 1239px;
   }
 
   .u-section-3 .u-list-1 {
-    margin-top: 147px;
-    margin-bottom: 0;
+    margin-top: 50px;
     height: auto;
     width: auto;
     margin-right: initial;
@@ -884,71 +984,95 @@
   }
 
   .u-section-3 .u-repeater-1 {
-    min-height: 1787px;
+    min-height: 1151px;
   }
 
   .u-section-3 .u-container-layout-1 {
-    padding-right: 0;
+    padding-left: 9px;
+    padding-right: 9px;
   }
 
   .u-section-3 .u-group-1 {
     width: 317px;
-    margin-top: 193px;
+    min-height: 105px;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .u-section-3 .u-text-1 {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .u-section-3 .u-text-2 {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .u-section-3 .u-container-layout-3 {
-    padding-right: 0;
+    padding-left: 9px;
+    padding-right: 9px;
   }
 
   .u-section-3 .u-group-2 {
     width: 317px;
-    margin-top: 0;
+    min-height: 105px;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .u-section-3 .u-container-layout-5 {
-    padding-right: 0;
+    padding-left: 9px;
+    padding-right: 9px;
   }
 
   .u-section-3 .u-group-3 {
     width: 317px;
-    margin-top: 0;
+    min-height: 105px;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .u-section-3 .u-container-layout-7 {
-    padding-right: 0;
+    padding-left: 9px;
+    padding-right: 9px;
   }
 
   .u-section-3 .u-group-4 {
     width: 317px;
-    margin-top: 0;
+    min-height: 105px;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .u-section-3 .u-container-layout-9 {
-    padding-right: 0;
+    padding-left: 9px;
+    padding-right: 9px;
   }
 
   .u-section-3 .u-group-5 {
     width: 317px;
-    margin-top: 0;
+    min-height: 105px;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .u-section-3 .u-container-layout-11 {
-    padding-right: 0;
+    padding-left: 9px;
+    padding-right: 9px;
   }
 
   .u-section-3 .u-group-6 {
     width: 317px;
-    margin-top: 0;
+    min-height: 105px;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }@font-face {
   font-family: 'trebuc';

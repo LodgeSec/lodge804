@@ -3,7 +3,7 @@ const app = express()
 
 // Serve static files from the "public" directory
 app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + 'public/index.html');
 });
 
 const port = process.env.PORT || 8080

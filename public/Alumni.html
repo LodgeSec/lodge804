@@ -135,5 +135,30 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
         </div>
         <p class="u-align-center u-small-text u-text u-text-variant u-text-1">804 Castle Point Terrace, Hoboken, NJ 07030</p>
       </div></footer>
+
+<script>
+    // Define the Konami code sequence
+    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft',     'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+    const georgeCode = ['KeyG', 'KeyE', 'KeyO', 'KeyR', 'KeyG', 'KeyE'];
+
+    // Define a variable to keep track of the keys that are pressed
+    let pressedKeys = [];
+
+    // Listen for keydown events
+    document.addEventListener('keydown', (event) => {
+      // Add the pressed key to the array
+      pressedKeys.push(event.code);
+
+      // Check if the array matches the Konami code sequence
+      if (pressedKeys.length === konamiCode.length && pressedKeys.every((key, index) => key === konamiCode[index])) {
+        // Redirect the user to another website
+        window.location.href = 'https://www.facebook.com/photo.php?fbid=10155262056295466&set=a.469194485465.273569.743605465&type=3&theater';
+      }
+      if (pressedKeys.length === georgeCode.length && pressedKeys.every((key, index) => key === georgeCode[index])) {
+        // Redirect the user to another website
+        window.location.href = 'AlumniGeorge.html';
+      }
+    });
+    </script>
   
 </body></html>

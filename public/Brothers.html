@@ -122,7 +122,7 @@
             </div>
             <div class="u-container-style u-palette-3-base u-tab-pane u-tab-pane-4" id="link-tab-7fce" role="tabpanel" aria-labelledby="tab-7fce">
               <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-4">
-                <div class="u-absolute-hcenter-xs u-expanded u-palette-1-light-2 u-shape u-shape-rectangle"></div>
+                <div class="u-absolute-hcenter-xs u-expanded-height u-palette-1-light-2 u-shape u-shape-rectangle"></div>
                 <div class="u-absolute-hcenter-xs u-expanded-height u-palette-1-light-2 u-shape u-shape-rectangle u-shape-7"></div>
                 <blockquote class="u-align-center u-text u-text-default u-text-4">Matthew Werner<br>Jacob Lopez
                 </blockquote>
@@ -154,5 +154,30 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
         </div>
         <p class="u-align-center u-small-text u-text u-text-variant u-text-1">804 Castle Point Terrace, Hoboken, NJ 07030</p>
       </div></footer>
+
+<script>
+    // Define the Konami code sequence
+    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft',     'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+    const georgeCode = ['KeyG', 'KeyE', 'KeyO', 'KeyR', 'KeyG', 'KeyE'];
+
+    // Define a variable to keep track of the keys that are pressed
+    let pressedKeys = [];
+
+    // Listen for keydown events
+    document.addEventListener('keydown', (event) => {
+      // Add the pressed key to the array
+      pressedKeys.push(event.code);
+
+      // Check if the array matches the Konami code sequence
+      if (pressedKeys.length === konamiCode.length && pressedKeys.every((key, index) => key === konamiCode[index])) {
+        // Redirect the user to another website
+        window.location.href = 'https://www.facebook.com/photo.php?fbid=10155262056295466&set=a.469194485465.273569.743605465&type=3&theater';
+      }
+      if (pressedKeys.length === georgeCode.length && pressedKeys.every((key, index) => key === georgeCode[index])) {
+        // Redirect the user to another website
+        window.location.href = 'BrothersGeorge.html';
+      }
+    });
+    </script>
   
 </body></html>

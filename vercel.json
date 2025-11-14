@@ -2,6 +2,12 @@
   "version": 2,
   "builds": [
     { "src": "index.html", "use": "@vercel/static" },
+    { "src": "about.html", "use": "@vercel/static" },
+    { "src": "alumni.html", "use": "@vercel/static" },
+    { "src": "officers.html", "use": "@vercel/static" },
+    { "src": "history.html", "use": "@vercel/static" },
+    { "src": "peermentorship.html", "use": "@vercel/static" },
+    { "src": "contact.html", "use": "@vercel/static" },
     { "src": "assets/**", "use": "@vercel/static" }
   ],
   "routes": [

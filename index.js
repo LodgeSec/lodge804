@@ -7,9 +7,25 @@ const app = express();
 const fs = require('fs');
 
 // Prefer 'public' directory if it exists, otherwise serve files from repo root
-let PUBLIC_DIR = path.join(__dirname, 'public');
-if (!fs.existsSync(PUBLIC_DIR)) {
-  // fallback to repository root where your HTML files currently live
+// Candidate locations to look for the site files (in order):
+// 1) newlodgesite/public
+// 2) working directory's public (process.cwd())
+// 3) newlodgesite ( __dirname )
+// 4) current working directory (process.cwd())
+const candidates = [
+  path.join(__dirname, 'public'),
+  path.join(process.cwd(), 'public'),
+  __dirname,
+  process.cwd(),
+];
+
+// Pick the first candidate that exists and contains index.html; otherwise pick the first existing dir
+let PUBLIC_DIR = candidates.find(dir => fs.existsSync(path.join(dir, 'index.html')));
+if (!PUBLIC_DIR) {
+  PUBLIC_DIR = candidates.find(dir => fs.existsSync(dir));
+}
+if (!PUBLIC_DIR) {
+  // as a last resort, use __dirname
   PUBLIC_DIR = __dirname;
 }
 
@@ -17,18 +33,14 @@ if (!fs.existsSync(PUBLIC_DIR)) {
 app.use(express.static(PUBLIC_DIR));
 
 // Fallback to index.html for single-page style routing
-// Use '/*' to avoid path-to-regexp errors with a bare '*'
-// Use a regular expression route to match any path and avoid path-to-regexp parsing issues
-// Fallback to index.html for single-page style routing
-// Use a RegExp route and check for index.html in the chosen PUBLIC_DIR
 app.get(/.*/, (req, res) => {
   const indexPath = path.join(PUBLIC_DIR, 'index.html');
   if (fs.existsSync(indexPath)) {
     return res.sendFile(indexPath);
   }
-  // If there's no index.html, return a helpful message
-  res.status(404).send('index.html not found in the public folder or repo root');
+  // If there's no index.html, return a helpful message listing checked paths
+  res.status(404).send('index.html not found in any checked locations: ' + candidates.join(', '));
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Listening on ${port}`));
+app.listen(port, () => console.log(`Listening on ${port} (serving ${PUBLIC_DIR})`));
